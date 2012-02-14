@@ -43,3 +43,11 @@ Next thing I'm gonna do is to create Socket.IO server and try if that library wo
 **1555 CET**
 
 Cool. The server is running and client sends commands `start`, `move` and `end`. It's time for the browser viewer! This is gonna be a lot of fun for it's the first time I try SVG or Canvas. (I'm gonna have to pick one I guess)
+
+**1600 CET**
+
+SVG seems to be the way. Canvas is like desktop drawing environment. You add things and then you redraw. I'm not sure how fast would that be. SVG seems to be something you can manipulate on the fly. And that's exactly what I need. I need to do things like add point to the last path.
+
+I could do the same thing with canvas, but... I don't know. I'm gonna do a bit more reasearch and see what libraries are there for both. 
+
+Okay I found Raphael.js which is exactly what I need. Nice, simple API, great example, that will do perfectly for my needs. 
