@@ -34,15 +34,21 @@ I'm gonna use Socket.IO to make it work on older browser too. Here's the [Cocoa 
 
 I have no idea how fast it will be, and if it will look anything like real time. I don't feel like doing any research, so I'm just gonna write some code and see what happens.
 
+---
+
 **1530 CET**
 
 Well, it took me a while to install all libraries required for Socket.IO in Cocoa application. Also I path-managing code away to its own class, because that's where I'll add the networking now.
 
 Next thing I'm gonna do is to create Socket.IO server and try if that library works.
 
+---
+
 **1555 CET**
 
 Cool. The server is running and client sends commands `start`, `move` and `end`. It's time for the browser viewer! This is gonna be a lot of fun for it's the first time I try SVG or Canvas. (I'm gonna have to pick one I guess)
+
+---
 
 **1600 CET**
 
