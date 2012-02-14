@@ -7,14 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SocketIO.h"
 
-@interface D0Canvas : NSObject
+@interface D0Canvas : NSObject <SocketIODelegate>
 
 @property (retain) NSMutableSet *paths;
 @property (retain) UIBezierPath *currentPath;
+@property (retain) SocketIO *io;
 
 - (void)createPathAt:(CGPoint)point;
 - (void)lineTo:(CGPoint)point;
 - (void)endPathAt:(CGPoint)point;
+
+- (void)sendEvent:(NSString *)event withPoint:(CGPoint)point;
 
 @end
