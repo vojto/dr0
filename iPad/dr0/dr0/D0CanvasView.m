@@ -10,15 +10,18 @@
 
 @implementation D0CanvasView
 
-@synthesize paths, currentPath;
+@synthesize canvas;
 
 - (void)awakeFromNib {
-    self.paths = [NSMutableSet set];
-    self.currentPath = nil;
+    self.canvas = [[[D0Canvas alloc] init] autorelease];
+}
+
+- (void)dealloc {
+    self.canvas = nil;
 }
 
 - (void)drawRect:(CGRect)rect {
-    for (UIBezierPath *path in self.paths) {
+    for (UIBezierPath *path in self.canvas.paths) {
         [[UIColor redColor] set];
         [path stroke];
     }
@@ -29,11 +32,7 @@
     UITouch *touch = [[touches allObjects] lastObject];
     CGPoint point = [touch locationInView:self];
     
-    // Create new path
-    self.currentPath = [UIBezierPath bezierPath];
-    [self.currentPath moveToPoint:point];
-    [paths addObject:self.currentPath];
-    
+    [self.canvas createPathAt:point];
     [self setNeedsDisplay];
 }
 
@@ -42,7 +41,7 @@
     UITouch *touch = [[touches allObjects] lastObject];
     CGPoint point = [touch locationInView:self];
     
-    [self.currentPath addLineToPoint:point];
+    [self.canvas lineTo:point];
     
     [self setNeedsDisplay];
 }
@@ -58,8 +57,7 @@
     UITouch *touch = [[touches allObjects] lastObject];
     CGPoint point = [touch locationInView:self];
     
-    [self.currentPath addLineToPoint:point];
-    self.currentPath = nil;
+    [self.canvas endPathAt:point];
     
     [self setNeedsDisplay];
 }

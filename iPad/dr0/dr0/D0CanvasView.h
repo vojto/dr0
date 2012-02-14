@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "D0Canvas.h"
+
 @interface D0CanvasView : UIView
 
-@property (retain) NSMutableSet *paths;
-@property (retain) UIBezierPath *currentPath;
+@property (retain) D0Canvas *canvas;
 
 @end

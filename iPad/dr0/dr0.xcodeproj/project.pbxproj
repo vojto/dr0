@@ -61,6 +61,7 @@
 		9900C93914EAA46900E17688 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9900C93814EAA46900E17688 /* libz.1.2.5.dylib */; };
 		9900C93B14EAA47A00E17688 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9900C93A14EAA47A00E17688 /* CFNetwork.framework */; };
 		9900C93D14EAA49F00E17688 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9900C93C14EAA49F00E17688 /* MobileCoreServices.framework */; };
+		9900C94014EAA52C00E17688 /* D0Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 9900C93F14EAA52C00E17688 /* D0Canvas.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,6 +172,8 @@
 		9900C93814EAA46900E17688 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		9900C93A14EAA47A00E17688 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		9900C93C14EAA49F00E17688 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9900C93E14EAA52C00E17688 /* D0Canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = D0Canvas.h; sourceTree = "<group>"; };
+		9900C93F14EAA52C00E17688 /* D0Canvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = D0Canvas.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +237,8 @@
 				9900C87014EA9B0000E17688 /* D0ViewController.h */,
 				9900C87114EA9B0000E17688 /* D0ViewController.m */,
 				9900C87314EA9B0000E17688 /* D0ViewController.xib */,
+				9900C93E14EAA52C00E17688 /* D0Canvas.h */,
+				9900C93F14EAA52C00E17688 /* D0Canvas.m */,
 				9900C86514EA9B0000E17688 /* Supporting Files */,
 				9900C87B14EA9B3100E17688 /* D0CanvasView.h */,
 				9900C87C14EA9B3100E17688 /* D0CanvasView.m */,
@@ -515,6 +520,7 @@
 				9900C91B14EAA36900E17688 /* ASIS3ServiceRequest.m in Sources */,
 				9900C92E14EAA38600E17688 /* SocketIO.m in Sources */,
 				9900C93314EAA3F000E17688 /* Reachability.m in Sources */,
+				9900C94014EAA52C00E17688 /* D0Canvas.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
