@@ -33,6 +33,7 @@
 - (void)createPathAt:(CGPoint)point {
     self.currentPath = [UIBezierPath bezierPath];
     [self.currentPath moveToPoint:point];
+    [self.currentPath setLineWidth:3.0];
     [paths addObject:self.currentPath];
     
     [self sendEvent:@"start" withPoint:point];
@@ -51,6 +52,12 @@
     [self sendEvent:@"close" withPoint:point];
 }
 
+- (void)clean {
+    self.currentPath = nil;
+    self.paths = [NSMutableSet set];
+    [self sendEvent:@"clean"];
+}
+
 #pragma mark - Networking
 
 - (void)sendEvent:(NSString *)event withPoint:(CGPoint)point {
@@ -61,6 +68,9 @@
     [self.io sendEvent:event withData:data];
 }
 
+- (void)sendEvent:(NSString *)event {
+    [self.io sendEvent:event withData:[NSDictionary dictionary]];
+}
 
 - (void) socketIODidConnect:(SocketIO *)socket {
     NSLog(@"Connected! %@", socket);

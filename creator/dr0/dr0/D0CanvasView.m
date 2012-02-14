@@ -62,4 +62,8 @@
     [self setNeedsDisplay];
 }
 
+- (IBAction)cleanAction:(id)sender {
+    [self.canvas clean];
+    [self setNeedsDisplay];
+}
 @end

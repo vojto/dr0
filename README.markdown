@@ -57,3 +57,13 @@ SVG seems to be the way. Canvas is like desktop drawing environment. You add thi
 I could do the same thing with canvas, but... I don't know. I'm gonna do a bit more reasearch and see what libraries are there for both. 
 
 Okay I found Raphael.js which is exactly what I need. Nice, simple API, great example, that will do perfectly for my needs. 
+
+---
+
+**1645 CET**
+
+Aaand we're done. The client was easy, you just change the `path` attribute of the path object to add more points. It's probably not too fast, but whatever.
+
+Also, I added little Clean button. And works really nicely, later I'll try to deploy it and then connect through my VPS in the US, to see how usable it is when it's really used over the continent.
+
+This was fun and I'll find this little tool very useful.

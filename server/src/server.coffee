@@ -18,16 +18,17 @@ class Server
 
     socket = io.listen(@port)
     socket.sockets.on 'connection', (client) ->
-      log "client connected", client
       client.on 'start', (data) ->
         log 'path started', data
-        socket.emit 'start', data
+        socket.sockets.emit 'start', data
       client.on 'move', (data) ->
         log 'path moved', data
-        socket.emit 'move', data
+        socket.sockets.emit 'move', data
       client.on 'close', (data) ->
         log 'path closed', data
-        socket.emit 'close', data
+        socket.sockets.emit 'close', data
+      client.on 'clean', (data) ->
+        socket.sockets.emit 'clean', data
 
   
   # Sending socket messages

@@ -20,5 +20,8 @@
 - (void)endPathAt:(CGPoint)point;
 
 - (void)sendEvent:(NSString *)event withPoint:(CGPoint)point;
+- (void)sendEvent:(NSString *)event;
+
+- (void)clean;
 
 @end

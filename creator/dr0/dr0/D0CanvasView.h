@@ -14,4 +14,6 @@
 
 @property (retain) D0Canvas *canvas;
 
+- (IBAction)cleanAction:(id)sender;
+
 @end

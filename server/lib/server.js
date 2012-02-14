@@ -24,18 +24,20 @@
       log("Starging on port " + this.port);
       socket = io.listen(this.port);
       return socket.sockets.on('connection', function(client) {
-        log("client connected", client);
         client.on('start', function(data) {
           log('path started', data);
-          return socket.emit('start', data);
+          return socket.sockets.emit('start', data);
         });
         client.on('move', function(data) {
           log('path moved', data);
-          return socket.emit('move', data);
+          return socket.sockets.emit('move', data);
         });
-        return client.on('close', function(data) {
+        client.on('close', function(data) {
           log('path closed', data);
-          return socket.emit('close', data);
+          return socket.sockets.emit('close', data);
+        });
+        return client.on('clean', function(data) {
+          return socket.sockets.emit('clean', data);
         });
       });
     };
