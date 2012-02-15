@@ -19,7 +19,7 @@
         self.currentPath = nil;
         
         self.io = [[SocketIO alloc] initWithDelegate:self];
-        [self.io connectToHost:@"192.168.0.105" onPort:5000];
+        [self.io connectToHost:@"rinik.net" onPort:5000];
     }
     
     return self;

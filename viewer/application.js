@@ -13,7 +13,7 @@ function Canvas() {
 
 Canvas.prototype.connect = function() {
   var self = this;
-  this.socket = io.connect('http://localhost:5000');
+  this.socket = io.connect('http://rinik.net:5000');
   this.socket.on('start', function(data) {
     self.start(data);
   });
